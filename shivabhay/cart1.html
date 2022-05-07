@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex
+        }
+        #cartcont{
+        width:95%;
+        height: auto;
+       /* display:grid; */
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        margin: auto;
+        gap: 10px;
+        }
+        #totalcost{
+          
+            width: 40%;
+            height: 400px;
+           
+            margin-right: 150px;
+            margin-top: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        #cst{
+
+            width:90%;
+            height: 50px;
+            justify-content: space-between;
+           
+            margin: auto;
+            display: flex;
+            
+        }
+        #cst>div{
+       
+            width:100px;
+            height: 50px;
+            
+            align-items: center;
+         }
+         #est{
+            width:90%;
+            height: 50px;
+            justify-content: space-between;
+            
+            margin: auto;
+            display: flex;
+            margin-bottom: 20px;
+
+
+         }
+         #est>div{
+             
+            width:100px;
+            height: 50px;
+            
+            align-items: center;
+        }
+        #bt{
+
+            width: 80%;
+            height: 50px;
+            background-color: #0161ff;
+            color: white;
+        }
+        a{
+            background-color: #0161ff;
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        #prc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #ecp{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+       #dsp{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-left: 50px;
+        }
+        #dsp:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+
+
+     
+    </style>
+
+</head>
+<body>
+    
+    <div id="cartcont"></div>
+    <div id="totalcost">
+        <div id="cst">
+            <div><h3>Item total</h3></div>
+            <div id="prc"></div>
+        </div>
+        <div id="est">
+            <div><h3>Estimated Cost</h3></div>
+            <div id="ecp"></div>
+        </div>
+        <button id="bt">
+            <a href="#">CHECK OUT</a>
+        </button>
+        <p>By clicking ‘Check Out Now’, you will be redirected to the eShopWorld checkout page where payment will be taken and your order fulfilled by eShopWorld, J.Crew's preferred partner for international sales.</p>
+         <form id="coupon">
+             <input id="inp" type="text" placeholder="Apply coupon">
+             <input type="submit">
+         </form>
+    </div>
+</body>
+</html>
+<script>
+   var cart=JSON.parse(localStorage.getItem("cartlist"))
+   console.log(cart);
+ display(cart)
+ 
+ function display(cart){
+    var sum=0;
+ cart.forEach(function(ele,index){
+    
+    var disp=document.createElement("div");
+    disp.style.width="600px";
+    disp.style.height="150px";
+    disp.setAttribute("id","dsp")
+   
+    disp.style.display="flex";
+    disp.style.gap="10px";
+    var detail=document.createElement("div");
+    detail.style.width="80%";
+    detail.style.height="100%";
+    
+    var name=document.createElement("p")
+    name.innerText=ele.name;
+    var cost=document.createElement("h3");
+    cost.style.marginTop="-10px"
+    cost.innerText= "INR"+" "+ele.cost;
+    sum=sum+Number(ele.cost);
+    console.log(sum)
+    var type=document.createElement("h3");
+     type.innerText=ele.type;
+    var btn=document.createElement("button");
+    btn.innerText="Remove";
+    btn.style.color="white";
+    btn.style.marginLeft="100px"
+    btn.style.paddingTop="-20px"
+    btn.style.backgroundColor="black";
+    btn.addEventListener("click",function(){
+
+    removeitem(ele,index)
+     
+    })
+    
+
+    var img=document.createElement("div");
+    img.style.width="20%";
+    img.style.height="95%"
+    img.style.marginLeft="10px";
+    
+   
+    var img_url=document.createElement("img");
+    img_url.style.width="100%";
+    img_url.style.height="100%"
+    img_url.setAttribute("src",ele.image_url);
+   
+
+    img.append(img_url)
+    detail.append(name,cost,type,btn)
+
+
+
+    disp.append(img,detail)
+  
+document.querySelector("#cartcont").append(disp)
+  
+ });
+
+ function removeitem(ele,index)
+ {
+   
+   cart.splice(index,1);
+   localStorage.setItem("cartlist",JSON.stringify(cart))
+   window.location.reload()
+
+ }
+
+ document.querySelector("#prc").append("INR","  ",sum)
+//  document.querySelector("#ecp").append(sum)
+  var frm=document.querySelector("form");
+  frm.addEventListener("submit",applycode)
+ function applycode(){
+     event.preventDefault()
+    var code=coupon.inp.value;
+    console.log(code)
+    if(code=="MASAI30")
+    {
+      var x=(sum-((sum*30)/100))
+      document.querySelector("#ecp").append(x)
+    }
+    else 
+    {
+       x=sum;
+       document.querySelector("#ecp").append(x)
+    }
+    console.log(x)
+    
+ }
+
+
+}
+ 
+
+ 
+
+
+
+</script>
