@@ -66,10 +66,11 @@
         }
         #bt{
 
-            width: 80%;
+            /* width: 80%; */
             height: 50px;
             background-color: #0161ff;
             color: white;
+            border-radius: 10px;
         }
         a{
             background-color: #0161ff;
@@ -115,7 +116,7 @@
             <div id="ecp"></div>
         </div>
         <button id="bt">
-            <a href="#">CHECK OUT</a>
+            <a href="payment.html">CHECK OUT</a>
         </button>
         <p>By clicking ‘Check Out Now’, you will be redirected to the eShopWorld checkout page where payment will be taken and your order fulfilled by eShopWorld, J.Crew's preferred partner for international sales.</p>
          <form id="coupon">
@@ -206,10 +207,11 @@ document.querySelector("#cartcont").append(disp)
  function applycode(){
      event.preventDefault()
     var code=coupon.inp.value;
-    console.log(code)
+   // console.log(code)
     if(code=="MASAI30")
     {
-      var x=(sum-((sum*30)/100))
+        var y = (sum*30)/100
+      var x=sum-y;
       document.querySelector("#ecp").append(x)
     }
     else 
