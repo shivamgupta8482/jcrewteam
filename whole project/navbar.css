@@ -1,9 +1,12 @@
 
+
+
+
 /* -----------------------------------------------navbar--------------------------------------------------------- */
 
 #container11{
     width: 100%;
-    height: 55px;
+    height: 80px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     display: flex;
     justify-content: space-around;
@@ -96,19 +99,24 @@ margin-left: 40px;
 }
 
 #heart1{
-    /* width: 90px;
-    height:50px; */
-    /* margin-left:-80px;
-    margin-top:10px; */
-    background-color: red;
-    margin-right: 20px;
-    border-radius: 20px;
-    margin-top: -13px;
-    padding: 5px;
- }
- #heart1>h5{
-   color: white;
- }
+   width: 70px;
+   height: 10px;
+   /* margin-left:-80px;
+   margin-top:10px; */
+   background-color: white;
+   margin-right: 20px;
+   border-radius: 20px;
+   /* margin-top: -10px; */
+   /* padding: 10px; */
+
+}
+#heart1:hover{
+  color: #4CAF50;
+}
+
+#heart1>h5{
+  color: white;
+}
 #bag1>img{
     width: 25px;
    height:25px;
@@ -123,11 +131,16 @@ margin-left: 40px;
    color:blueviolet;
    font-weight: bold;
 }
+#bag1:hover{
+background-color: pink;
+border-radius: 50px;
+padding: 2px;
 
+}
 
-
-
-/* -------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-
+#signin1{
+  margin-top: 20px;
+}
+#bag1{
+  margin-bottom: 10px;
+}
