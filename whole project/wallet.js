@@ -949,7 +949,7 @@ var mensData = [
         img2:"https://www.jcrew.com/s7-img-facade/H5807_RD5695_sw?$pdp_sw20$",
         img3:"https://www.jcrew.com/s7-img-facade/H5807_GY6005_sw?$pdp_sw20$",
         img4:"https://www.jcrew.com/s7-img-facade/H5807_GR7058_sw?$pdp_sw20$",
-        cost:610,
+        cost:2345,
         rating:5,
         type:"wallet"
        },
@@ -1504,6 +1504,9 @@ vai.addEventListener("click",shivam);
 function shivam(){
   if(vai.innerText=="Sign In"){
     window.location.href="signup.html";
+  }
+  else{
+    window.location.href="changename.html";
   }
 }
 

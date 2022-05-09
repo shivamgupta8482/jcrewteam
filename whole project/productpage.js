@@ -1504,6 +1504,9 @@ function shivam(){
   if(vai.innerText=="Sign In"){
     window.location.href="signup.html";
   }
+  else{
+    window.location.href="changename.html";
+  }
 }
 
 
