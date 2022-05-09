@@ -1187,9 +1187,9 @@ document.querySelector("#container1").innerHTML="";
     card1.setAttribute("class","bigcard");
 
 
-var image = document.createElement("img");
-image.setAttribute("src",elem.image_url);
-image.setAttribute("id","image11");
+var image21 = document.createElement("img");
+image21.setAttribute("src",elem.image_url);
+image21.setAttribute("id","image11");
 
 var name1 = document.createElement("p");
 name1.innerText = elem.name;
@@ -1267,7 +1267,7 @@ div6.addEventListener("click",function(){
 
 
 mencolour1.append(div1,div2,div3,div4,divn,div5,div6)
-card1.append(image,name1,price1,mencolour1);
+card1.append(image21,name1,price1,mencolour1);
 //console.log(card1);
 document.querySelector("#container1").append(card1);
   });
@@ -1521,4 +1521,3 @@ fab2.innerText=bagArr.length
 if(bagArr.length==0){
   fab2.innerText="";
 }
-
