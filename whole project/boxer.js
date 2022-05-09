@@ -2923,3 +2923,25 @@ if(nav12.value=="walleting"){
 }
 
 }
+
+var vai = document.querySelector("#signin11")
+vai.innerText=JSON.parse(localStorage.getItem("name2"))||"Sign In";
+vai.addEventListener("click",shivam);
+function shivam(){
+  if(vai.innerText=="Sign In"){
+    window.location.href="signup.html";
+  }
+}
+
+
+var fab1 = document.querySelector("#heart1>h6");
+fab1.innerText=favouritesArr.length
+if(favouritesArr.length==0){
+  fab1.innerText="";
+}
+
+var fab2 = document.querySelector("#bag1>h6");
+fab2.innerText=bagArr.length
+if(bagArr.length==0){
+  fab2.innerText="";
+}

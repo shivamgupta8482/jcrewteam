@@ -116,9 +116,9 @@
       #box{
           margin-top: 2px;
       }
-#signin1{
+/* #signin1{
     margin-top: 10px;
-}
+} */
 
 
 #fvrtempty{
@@ -246,14 +246,14 @@
                 <option value="hamster">Mix-Media</option>
                 <option value="parrot">Fits</option>
              </select> 
-            <select id="pet-select">
+            <!-- <select id="pet-select">
                 <option  id="TTT" id="red" value="">Sale</option>
                 <option value="dog">Women</option>
                 <option value="cat">Men</option>
                 <option value="hamster">Girls</option>
                 <option value="parrot">Boys</option>
                 <option value="spider">Kids</option>
-            </select> 
+            </select>  -->
       
     
            </div>
@@ -267,7 +267,7 @@
             </div>
            
             <div id="signin2">
-                <button><a href="signup.html">Sign in</a></button>
+                <button id="signin11">Sign in</button>
             </div>
             <div id="heart1">
                 <h5><a href="favrt.html">Favourites</a></h5>
@@ -405,7 +405,7 @@ function pay(){
     else{
         localStorage.setItem("payment",JSON.parse(sum1));
         
-        window.location.href="address.html"
+        window.location.href="address.html";
 
     }
     

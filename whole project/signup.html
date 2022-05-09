@@ -9,7 +9,7 @@
        
         #zontainer2{
             width: 30%;
-            height: 80%;
+            height: 470px;
             margin: auto;
             gap: 20px;
             background-color: aqua;
@@ -67,7 +67,7 @@
 <body>
     <div id="zontainer2">
         <div><h1>Sign Up</h1></div>
-
+        <div><input id="emaill1" type="email" placeholder="Enter Your Name"></div>
         <div><input id="emaill" type="email" placeholder="Email Address*"></div>
 
         <div><input id="pwd" type="password" placeholder="Create Password*"></div>
@@ -108,17 +108,33 @@
 
 <script>
     
-var x = document.querySelector("#emaill").value
-var y = document.querySelector("#pwd").value
-
+var x = document.querySelector("#emaill")
+var y = document.querySelector("#pwd")
+var z=document.querySelector("#country")
+var z1 = document.querySelector("#emaill1")
 
 document.querySelector("#create").addEventListener("click",sanjiv);
 
 function sanjiv(){
   
-
+if(x.value==""){
+    alert("Enter Your Email")
+}
+else if(y.value==""){
+    alert("enter Password")
+}
+else if(z.value=="country"){
+    alert("Select Country");
+}
+else if(z1.value==""){
+    alert("enter Your name")
+}
+else{
     alert("Account Created Succesfully")
+    localStorage.setItem("name2",JSON.stringify("Welcome"+" "+z1.value))
     window.location.href = "signin.html"
+}
+   
 
 
 }

@@ -67,7 +67,7 @@
 
         <div id="idz2">
             <h1>Delivery Address</h1>
-            <form action="">
+           <!-- <form action=""> -->
                 <input id="val6" type="text" placeholder="First Name*">
                 <input type="text" placeholder="Last Name*">
                 <br>
@@ -90,10 +90,10 @@
                 <br>
                 <input id="val5" type="email" placeholder="Email Address*">
                 <br>
-                <button>
+                <button id="paybut">
                     <h2>CONTINUE TO PAY</h2>
                 </button>
-            </form>
+            <!-- </form> -->
         </div>
     </div>
 </body>
@@ -105,7 +105,7 @@
     var var5 = document.querySelector("#val5");
     var var6 = document.querySelector("#val6");
     var var7 = document.querySelector("#val7")
-var butt1 = document.querySelector("button");
+var butt1 = document.querySelector("#paybut");
 butt1.addEventListener("click",shiv)
 
 function shiv(){
@@ -130,8 +130,8 @@ function shiv(){
     else if(var7.value=="hi"){
         alert("Enter Country")
     }
-    else{
-window.location.href="payment.html"
+   else{
+window.location.href="payment.html";
     }
 
 }
