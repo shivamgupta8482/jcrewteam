@@ -11,6 +11,8 @@
     <div class="containerk">
         <div class="card ">
             <p class="h8 ">Payment Details</p>
+<h2 id="sty"></h2>
+
             <div >
                 <div >
                     <div >
@@ -47,6 +49,11 @@
     </div>
 </body>
 <script>
+var pay =JSON.parse(localStorage.getItem("payment"))
+
+var y1= document.querySelector("#sty");
+y1.innerHTML="Pay INR "+pay;
+
     document.querySelector(".ps-3").addEventListener("click",shivam);
     function shivam(){
 

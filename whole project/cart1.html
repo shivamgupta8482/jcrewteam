@@ -294,7 +294,7 @@
             <div id="ecp"></div>
         </div>
         <button id="bt">
-            <a href="address.html">CHECK OUT</a>
+            CHECK OUT
         </button>
         <p>By clicking ‘Check Out Now’, you will be redirected to the eShopWorld checkout page where payment will be taken and your order fulfilled by eShopWorld, J.Crew's preferred partner for international sales.</p>
          <form id="coupon">
@@ -347,7 +347,7 @@
     cost.style.marginTop="-10px"
     cost.innerText= "INR"+" "+ele.cost;
     sum=sum+Number(ele.cost);
-    console.log(sum)
+    //console.log(sum)
     var type=document.createElement("h3");
      type.innerText=ele.type;
     var btn=document.createElement("button");
@@ -394,8 +394,23 @@ document.querySelector("#cartcont").append(disp)
    window.location.reload()
 
  }
-
+var sum1 = sum;
  document.querySelector("#prc").append("INR","  ",sum)
+var butp=document.querySelector("#bt")
+butp.addEventListener("click",pay)
+function pay(){
+    if(sum==0){
+        alert("Nohing Added In Bag");
+    }
+    else{
+        localStorage.setItem("payment",JSON.parse(sum1));
+        
+        window.location.href="address.html"
+
+    }
+    
+}
+
 //  document.querySelector("#ecp").append(sum)
   var frm=document.querySelector("form");
   frm.addEventListener("submit",applycode)
@@ -403,19 +418,24 @@ document.querySelector("#cartcont").append(disp)
      event.preventDefault()
     var code=coupon.inp.value;
    //console.log(code)
-    if(code=="MASAI30")
+    if(code=="masai30")
     {
         var y = (sum*30)/100
       var x=sum-y;
       console.log(x);
       document.querySelector("#ecp").append(x)
+      frm.innerHTML="";
+    //   localStorage.setItem("payment",JSON.stringify(x));
+    sum1 =x;
     }
     else 
     {
        x=sum;
        document.querySelector("#ecp").append(x)
+       localStorage.setItem("payment",x);
+    //    localStorage.setItem("payment",JSON.stringify(x));
     }
-    console.log(x)
+    //console.log(x)
     
  }
 
