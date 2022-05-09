@@ -414,8 +414,14 @@ function pay(){
 //  document.querySelector("#ecp").append(sum)
   var frm=document.querySelector("form");
   frm.addEventListener("submit",applycode)
+  
  function applycode(){
      event.preventDefault()
+//      var count =0;
+//   count++;
+//   if(count>1){
+//     document.querySelector("#ecp")=="";
+//   }
     var code=coupon.inp.value;
    //console.log(code)
     if(code=="masai30")
@@ -432,7 +438,7 @@ function pay(){
     {
        x=sum;
        document.querySelector("#ecp").append(x)
-       localStorage.setItem("payment",x);
+     //  localStorage.setItem("payment",x);
     //    localStorage.setItem("payment",JSON.stringify(x));
     }
     //console.log(x)
