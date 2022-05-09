@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+     body{
+     font-family:'Quicksand', sans-serif;
+     text-align:center; 
+     background-color:rgb(136, 145, 145);
+     }
+    h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 60px;
+    color : black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #form{
+        border : 1px solid violet;
+        box-shadow: rgba(9, 230, 64, 0.16) 0px 1px 4px, rgb(44, 110, 0) 0px 0px 0px 2px;
+        height : 400px;
+        width: 20%;
+        margin:auto;
+        margin-top: 100px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: blanchedalmond;
+      }
+    #form>input{
+        height: 40px;
+        margin: auto;
+        width: 90%;
+        margin-bottom: 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        padding-left: 15px;
+    }
+    #form>input:last-child{
+        background-color: whitesmoke;
+        margin-top: 30px;
+        height: 50px;
+        width: 98%;
+        cursor: pointer;
+        margin-bottom: 40px;
+    }
+    #form>input:last-child:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        color:black;
+        background-color:rgb(99, 190, 250);
+    }
+</style>
+</head>
+<body>
+    <form id="form">
+        <h1>Verify User</h1>
+       
+        <input id="OTP" type="number" placeholder="Enter the OTP ">
+        <input  id="" type = "submit">
+    </form>
+</body>
+
+<script>
+    var xy = JSON.parse(localStorage.getItem("bag1"));
+   // console.log(xy);
+    document.addEventListener("submit",compareData)
+    function compareData(){
+    event.preventDefault()
+    
+    if( form.OTP.value == 1234){
+
+        xy.splice(0,xy.length)
+        localStorage.setItem("bag1",JSON.stringify(xy));
+         alert("Congratulations! payment successful.OrderPlaced Successfully")
+         alert("Thanks For Shopping From J.crew")
+         window.location.href="productpage.html"
+         
+        
+     }
+     else{
+         alert("Invalid OTP.")
+     }
+    }
+    </script>
+    </html>

@@ -35,6 +35,7 @@
             text-align: center;
             margin-left: 20px;
             margin-right: 20px;
+            border-radius: 10px;
         }
         p{
             margin-left: 20px;
@@ -65,17 +66,39 @@
         <input class="input" type="password" placeholder="Password*">
         <div class="newuser">
             <div><p>Remenber me</p></div>
-            <div><button>Forgot Password?</button></div>
+            <div><button id="bui">Forgot Password? </button></div>
         </div>
         <br>
-        <button><h3>SIGN IN</h3></button>
+        <button id="signin1"><h3>SIGN IN</h3></button>
         <P>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</P>
         <hr>
         <div class="newuser">
             <div><h3>Don’t have an account?</h3></div>
-            <div><button>Sign Up Now</button></div>
+            <div><button id="signup">Sign Up Now</button></div>
         </div>
     </div>
     
 </body>
+<script>
+    document.querySelector("#signin1").addEventListener("click",signin12)
+
+    function signin12(){
+        alert("signin successful");
+        window.location.href="productpage.html";
+    }
+   
+    document.querySelector("#signup").addEventListener("click",signin123)
+
+function signin123(){
+   
+    window.location.href="signup.html";
+}
+
+document.querySelector("#bui").addEventListener("click",shi)
+function shi(){
+    window.location.href="forgotpassword.html"
+}
+
+</script>
+
 </html>

@@ -16,15 +16,15 @@
 /* -----------------------------------------------navbar--------------------------------------------------------- */
 
 #container11{
-    width: 100%;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    z-index: 100;
-    background-color: white;
-    margin-top: -1.4%;
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  margin-top: -1.4%;
 }
 #logo1{
 width: 60%;
@@ -39,22 +39,22 @@ margin-left:50px;
 }
 
 #text1{
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
-    margin-top: 5px;
-    margin-left:-60px;
-    font-size: large;
-     }
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-left:-60px;
+  font-size: large;
+   }
 #text1>div{
- border:none;
+border:none;
 }
 
 /* search , heart , bag div */
 #signin1{
-    width: 30%;
-    display: flex;
-    justify-content: end;
+  width: 30%;
+  display: flex;
+  justify-content: end;
 }
 
 #search-text-input{
@@ -66,9 +66,9 @@ box-shadow:0px 1px 1px 1px #e5e5e5;
 float:left;
 height:17px;
 margin:.8em 0 0 .5em; 
-margin-top:20px;
+margin-top:31px;
 margin-left: -20px;;
-padding:.4em 0 .4em .6em; 
+padding:12px; 
 width:150px; 
 }
 #micro{
@@ -81,76 +81,80 @@ width:50px;
 margin-left: 40px;
 }
 #micro>img{
-    width: 60%;
-    margin-top:8px;
+  width: 60%;
+  margin-top:20px;
 }
 #box{
-    display:flex;
-    margin-left: -20px;
-    margin-top:-10px;
+  display:flex;
+  margin-left: -20px;
+  margin-top:-10px;
 }
 #search1{
-    height: 25px;
-    
+  height: 25px;
+  
 }
 #signin2{
-    width:250px;
-    margin-left:50px;
-    margin-top:-10px;
+  width:250px;
+  margin-left:50px;
+  margin-top:-10px;
 }
 #signin2>button{
-    padding:10px;
-    margin-top:15px;
-    border:none;
-    background-color: rgb(246, 247, 248);
-    font-weight: bold;
+  padding:10px;
+  margin-top:25px;
+  border:none;
+  background-color: rgb(246, 247, 248);
+  font-weight: bold;
 }
 #signin2>button:hover{
-    background-color: aqua;
+  background-color: aqua;
 }
 
 #heart1{
-   /* width: 90px;
-   height:50px; */
-   /* margin-left:-80px;
-   margin-top:10px; */
-   background-color: red;
-   margin-right: 20px;
-   border-radius: 20px;
-   margin-top: -13px;
-   padding: 5px;
+  /* width: 90px;
+  height:50px; */
+  /* margin-left:-80px;
+  margin-top:10px; */
+  margin-right: 20px;
+  border-radius: 20px;
+  margin-top:0px;
+  padding: 5px;
 }
 #heart1>h5{
-  color: white;
+ color: white;
+ /* display: block; */
 }
 #bag1>img{
-    width: 25px;
-   height:25px;
-   margin-left:-10px;
-   margin-top:8px;
+  width: 25px;
+ height:25px;
+ margin-left:-10px;
+ margin-top:10px;
+}
+#bag1>h5{
+  margin-top:28px;
 }
 #pet-select,#petselect1{
-    text-align: center;
-    font-size:15 px;
-   padding:5px;
-   border:none;
-   color:blueviolet;
-   font-weight: bold;
+  text-align: center;
+  font-size:15 px;
+ padding:5px;
+ border:none;
+ color:blueviolet;
+ font-weight: bold;
 }
-#bag1:hover{
-background-color: pink;
-border-radius: 50px;
-padding: 2px;
-
-}
-
-
 
 
 /* -------------------------------------------------------------------------------------------------------------------------------------- */
 
+#bag1>h6{
+  margin-top: -20px;
+  color: violet;
+  margin-left: 5px;
 
-
+}
+#heart1>h6{
+  margin-top: -20px;
+  color: violet;
+  margin-left: 25px;
+}
 
 
 
