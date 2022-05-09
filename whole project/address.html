@@ -28,6 +28,7 @@
             font-size: 18px;
             font-weight: 400;
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            border-radius: 10px;
         }
         select{
             height: 50px;
@@ -67,10 +68,10 @@
         <div id="idz2">
             <h1>Delivery Address</h1>
             <form action="">
-                <input type="text" placeholder="First Name*">
+                <input id="val6" type="text" placeholder="First Name*">
                 <input type="text" placeholder="Last Name*">
                 <br>
-                <select name="" id="">
+                <select name="" id="val7">
                     <option value="">Country</option>
                     <option value="">India</option>
                     <option value="">USA</option>
@@ -78,22 +79,45 @@
                     <option value="">England</option>
                 </select> 
                 <br>
-                <input type="text" placeholder="Address Line1*">
+                <input id="val1" type="text" placeholder="Address Line1*">
                 <br>
                 <input type="text" placeholder="Address Line2">
                 <br>
-                <input type="text" placeholder="Postal Code*">
-                <input type="text" placeholder="City*">
+                <input id="val2" type="text" placeholder="Postal Code*">
+                <input id="val3" type="text" placeholder="City*">
                 <br>
-                <input type="number" placeholder="Mobile Number*">
+                <input id="val4" type="number" placeholder="Mobile Number*">
                 <br>
-                <input type="email" placeholder="Email Address*">
+                <input id="val5" type="email" placeholder="Email Address*">
                 <br>
                 <button>
-                    <h2>CONTINUE TO PAYMENT</h2>
+                    <h2>CONTINUE TO PAY</h2>
                 </button>
             </form>
         </div>
     </div>
 </body>
+<script>
+    var var1 = document.querySelector("#val1");
+    var var2 = document.querySelector("#val2");
+    var var3 = document.querySelector("#val3");
+    var var4 = document.querySelector("#val4");
+    var var5 = document.querySelector("#val5");
+    var var6 = document.querySelector("#val6");
+var butt1 = document.querySelector("button");
+butt1.addEventListener("click",shiv)
+
+function shiv(){
+    if(var1.value==""){
+        alert("fill at least adress line1");
+    }
+    if(var2.value==""){
+        alert("")
+    }
+
+}
+   
+
+
+</script>
 </html>

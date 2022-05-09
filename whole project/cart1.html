@@ -120,6 +120,51 @@
     margin-top: 10px;
 }
 
+
+#fvrtempty{
+   
+   font-size: 30px;
+   width: 600px;
+   
+   margin-top: 50px;
+  margin-left: 20px;
+   border: 1px solid black;
+   padding: 50px;
+   color: black;
+   background-color: aqua;
+   border-radius: 20px;
+ }
+  #fvrtempty:hover{
+   color: white;
+   background-color: red;
+   border-radius: 20px;
+   /* padding: 10px 20px 10px 20px; */
+   
+
+ } 
+ #fvrtempty:hover #productbutt{
+   color: white;
+   background-color : black;
+   padding: 10px 20px 10px 20px;
+   border-radius: 20px;
+   font-weight: bold;
+
+ }
+ #fvrtempty:hover span{
+  display: none;
+ }
+ #fvrtempty:hover::before{
+   content: "Nothing Here To Show  ";
+   color: violet;
+ }
+ #productbutt{
+   margin-top: 20px;
+   /* width: 50px;
+   height: 20px; */
+   color: aqua;
+   background-color: aqua;
+   border: 1px solid aqua;
+ }
      
     </style>
  
@@ -249,7 +294,7 @@
             <div id="ecp"></div>
         </div>
         <button id="bt">
-            <a href="payment.html">CHECK OUT</a>
+            <a href="address.html">CHECK OUT</a>
         </button>
         <p>By clicking ‘Check Out Now’, you will be redirected to the eShopWorld checkout page where payment will be taken and your order fulfilled by eShopWorld, J.Crew's preferred partner for international sales.</p>
          <form id="coupon">
@@ -261,6 +306,23 @@
 </html>
 <script>
    var cart=JSON.parse(localStorage.getItem("bag1"))||[];
+
+    if(cart.length==0){
+   var div1 = document.createElement("div");
+  div1.innerText="Favourite Cart Is Empty Right Now"
+  div1.innerText = "Why Don't You Go On Product Page And Add Something In Bag"
+  
+   var butto=document.createElement("button")
+   butto.setAttribute("id","productbutt")
+  butto.addEventListener("click",prem);
+  butto.innerText = "GO TO PRODUCT PAGE"
+ div1.append(butto);
+ document.querySelector("#cartcont").append(div1)
+   function prem(){
+    window.location.href="productpage.html"
+ }
+ div1.setAttribute("id","fvrtempty");
+}
    //console.log(cart);
  display(cart)
  

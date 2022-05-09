@@ -37,7 +37,50 @@
    #bag1{
      margin-bottom: 2px;
    }
+   #fvrtempty{
    
+     font-size: 50px;
+     width: 1000px;
+     
+     margin-top: 50px;
+    margin-left: 200px;
+     border: 1px solid black;
+     padding: 50px;
+     color: black;
+     background-color: aqua;
+     border-radius: 20px;
+   }
+    #fvrtempty:hover{
+     color: white;
+     background-color: red;
+     border-radius: 20px;
+     /* padding: 10px 20px 10px 20px; */
+     
+
+   } 
+   #fvrtempty:hover #productbutt{
+     color: white;
+     background-color : black;
+     padding: 10px 20px 10px 20px;
+     border-radius: 20px;
+     font-weight: bold;
+
+   }
+   #fvrtempty:hover span{
+    display: none;
+   }
+   #fvrtempty:hover::before{
+     content: "Nothing Here To Show  ";
+     color: violet;
+   }
+   #productbutt{
+     margin-top: 20px;
+     /* width: 50px;
+     height: 20px; */
+     color: aqua;
+     background-color: aqua;
+     border: 1px solid aqua;
+   }
     </style>
  
 
@@ -175,14 +218,37 @@
 
 <script>
  
- var fvrt=JSON.parse(localStorage.getItem("favourites1"));
+ var fvrt=JSON.parse(localStorage.getItem("favourites1"))||[];
+ if(fvrt.length==0){
+  var div1 = document.createElement("div");
+  div1.innerText="Favourite Cart Is Empty Right Now"
+  div1.innerText = "Why Don't You Go On Product Page And Add Something In Favourites"
+  
+  var butto=document.createElement("button")
+  butto.setAttribute("id","productbutt")
+  butto.addEventListener("click",prem);
+  butto.innerText = "GO TO PRODUCT PAGE"
+  div1.append(butto);
+  document.querySelector("#fvrtcont").append(div1)
+  function prem(){
+    window.location.href="productpage.html"
+  }
+
+  div1.setAttribute("id","fvrtempty");
+  // div1.setAttribute("mouseover",shiv56)
+  // function
+  // console.log("empty")
+
+}
 
 //console.log(fvrt)
 var gotocartlist=JSON.parse(localStorage.getItem("bag1"))||[];
 display(fvrt);
 function display(fvrt){
 fvrt.forEach(function(ele,index)
-{ var disp=document.createElement("div")
+{ 
+ 
+  var disp=document.createElement("div")
 //  disp.style.width="300px";
 //  disp.style.height="auto";
 disp.setAttribute("id","cntn")
@@ -265,6 +331,8 @@ imgc.style.marginTop="-10px"
  });
 
 }
+
+
 
 function gotocart(ele,index)
 { var count=0;
